@@ -1,0 +1,28 @@
+.form-wrapper{
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-input{
+    width: 60%;
+    height: 3rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.ingrediences-wrapper{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    border-style: dotted;
+    line-height: 2px; 
+}
+
+.display-none{
+    display: none;
+}

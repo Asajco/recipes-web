@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styles from "./Search.module.css"
 
 
 function Search() {
@@ -23,20 +24,21 @@ function Search() {
   
   function displayIngrediences(){
     return ingrediences.map(ingredience => {
-      return <li>{ingredience}</li>
+      return <p>{ingredience}</p>
     }
     )
   }
  
   return (
     <div>
-      <form onSubmit={insertCurrentIngrediece}>
-        <input onChange={insertCurrentIngrediece} type="text" placeholder="Select your ingrediece" name="yourIngredience"></input>
+      <form onSubmit={insertCurrentIngrediece} className={styles["form-wrapper"]}>
+        <input onChange={insertCurrentIngrediece} type="text" placeholder="Type your ingrediece one by one..." name="yourIngredience" className={styles["form-input"]}></input>
         <button onClick={insertIngrediece}>Add</button>
       </form>
      {/* <button onClick={insertIngrediece}>insert ingredience</button> */}
-    {displayIngrediences()}
-    
+      <div>
+        {ingrediences.length===0 ? <div className={styles["display-none"]}></div> : <div className={styles["ingrediences-wrapper"]}> {displayIngrediences()}</div>}
+      </div>
     </div>
   )
 }
