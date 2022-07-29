@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import styles from "./Search.module.css"
-import Filter from './Filter'
 import Card from './Card'
 
 function Search() {
@@ -16,8 +15,8 @@ function Search() {
     const api = await fetch (
         `https://api.edamam.com/search?q=${ingrediences}&app_id=${APP_ID}&app_key=${APP_KEY}`        )
     const data = await api.json();
-    console.log(data)
     setRecipe(data.hits)
+
   }
   
  function insertCurrentIngrediece(event){
@@ -34,44 +33,59 @@ function Search() {
       // console.log(ingrediences)
   }
   
+
+  
   function displayIngrediences(){
+    console.log(ingrediences)
     return ingrediences.map(ingredience => {
       return <div>
         <p>{ingredience}</p>
+        <button onClick={removeIngredience}>click me</button>
       </div>
     }
     )
   }
   
-  function filterIngredinces(){
-    if(ingrediences === [/*ADD SOMETHING HERE*/]){
-      {getRecipeByIngredience()}
-      return <div>riť</div>
-    }
-  }
+    function removeIngredience(){
+      setIngrediences(prevState => {
+        return prevState.filter(ingredience => {
+          return ingredience !== currentIngredience})
+      })
+    } 
   
-  // function displayFilteredIngrediences(){
-    
-  // }
   useEffect(()=>{
     getRecipeByIngredience();
   },[ingrediences])
+  
   return (
     <div>
       <form onSubmit={insertCurrentIngrediece} className={styles["form-wrapper"]}>
         <input onChange={insertCurrentIngrediece} type="text" placeholder="Type your ingrediece one by one..." name="yourIngredience" className={styles["form-input"]}></input>
-        <button onClick={insertIngrediece}>Add</button>
+        <button onClick={insertIngrediece} className={styles["form-button"]}>Add ingredience</button>
       </form>
-      <div>
+      <section>
         {ingrediences.length===0 ? <div className={styles["display-none"]}></div> : 
+        
         <div className={styles["ingrediences-wrapper"]}>
         {displayIngrediences()} 
-        <button onClick={filterIngredinces}>riť</button>
         </div>}
-        
-      </div>
+        {recipe.length===0 ? <div className={styles["display-none"]}></div> :
+        <div className={styles["recipes-container"]}>
+        {recipe.map(meal => {
+          return <div>
+          <Card 
+              key = {meal.recipe.label}
+              title={meal.recipe.label}
+              image={meal.recipe.image}
+              cousine={meal.recipe.cuisineType}
+              mealType={meal.recipe.mealType}
+              />
+          </div>
+        })} 
+        </div>}
+      </section>
     </div>
   )
-}
+        }
 
 export default Search

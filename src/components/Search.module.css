@@ -1,23 +1,28 @@
 .form-wrapper{
     margin: 3rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    
 }
 
 .form-input{
-    width: 60%;
+    width: 20rem;
     height: 3rem;
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    
+}
+.form-button{
+
+    margin-left: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
 }
 
 .ingrediences-wrapper{
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 3rem;
     border-style: dotted;
     line-height: 2px; 
@@ -25,4 +30,15 @@
 
 .display-none{
     display: none;
+}
+.recipes-container{
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    border-style: dotted;
+}
+.recipe-wrapper{
+    display: flex;
+    
 }

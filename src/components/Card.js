@@ -1,42 +1,18 @@
-// import React, { useEffect, useState } from 'react'
+import React from 'react'
+import styles from './Card.module.css'
 
 
-// function Card() {
-   
-//     const [recipe, setRecipe] = useState([])
-    
-    
-    
-//     useEffect(()=>{
-//         getRecipe();
-//     },[])
+function Card(props) {
+  return (
+    <div className={styles["card-container"]}>
+    <h2 className={styles["card-title"]}>{props.title}</h2>
+    <img src={props.image} alt="" className={styles["card-image"]}/>
+    <div className={styles["recipe-info"]}>
+        <p><b>Coisine:</b> {props.cousine}</p>
+        <p>Meal type: {props.mealType}</p>
+    </div>
+    </div>
+  )
+}
 
-//     const getRecipe = async () => {
-//         const api = await fetch (
-//             'https://api.spoonacular.com/recipes/random?apiKey=ce736bea9bb94da99b8b545a645b961a&number=2'
-//         )
-//         const data = await api.json();
-//         console.log(data)
-        
-//     setRecipe(data.recipes)
-//   }
-
-//   return (
-//     <div>
-    
-//     {recipe.map((recipe) =>{
-
-//         return(
-//             <div key={recipe.id}>
-//                 <p>{recipe.title}</p>
-//                 <p>{recipe.description}</p>
-//                 <img src={recipe.image} alt="images of recipes"></img>
-//             </div>
-//         )
-//     })}
-//     </div>
-    
-//   )
-// }
-
-// export default Card
+export default Card

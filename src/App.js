@@ -1,6 +1,4 @@
 import './App.css';
-import {useState, useEffect} from 'react'
-import Card from './components/Card';
 import Search from './components/Search';
 
 

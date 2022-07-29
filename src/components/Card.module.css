@@ -1,0 +1,26 @@
+
+.card-container{
+    border: solid 1px rgb(185, 74, 74);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.card-title{
+    align-self: center;
+    height: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-image{
+    max-width: fit-content;
+    max-height: 17.5rem;
+}
+
+.recipe-info{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
