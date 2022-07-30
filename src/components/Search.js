@@ -13,7 +13,7 @@ function Search() {
     
   const getRecipeByIngredience = async () => {
     const api = await fetch (
-        `https://api.edamam.com/search?q=${ingrediences}&app_id=${APP_ID}&app_key=${APP_KEY}`        )
+        `https://api.edamam.com/search?q=${ingrediences}&app_id=${APP_ID}&app_key=${APP_KEY}`)
     const data = await api.json();
     setRecipe(data.hits)
 
@@ -37,10 +37,12 @@ function Search() {
   
   function displayIngrediences(){
     console.log(ingrediences)
+    console.log(recipe)
     return ingrediences.map(ingredience => {
-      return <div>
+      return <div className={styles["input-of-ingredience"]}>
         <p>{ingredience}</p>
         <button onClick={removeIngredience}>click me</button>
+        
       </div>
     }
     )
@@ -58,7 +60,7 @@ function Search() {
   },[ingrediences])
   
   return (
-    <div>
+    <div className={styles["body"]}>
       <form onSubmit={insertCurrentIngrediece} className={styles["form-wrapper"]}>
         <input onChange={insertCurrentIngrediece} type="text" placeholder="Type your ingrediece one by one..." name="yourIngredience" className={styles["form-input"]}></input>
         <button onClick={insertIngrediece} className={styles["form-button"]}>Add ingredience</button>
@@ -79,6 +81,7 @@ function Search() {
               image={meal.recipe.image}
               cousine={meal.recipe.cuisineType}
               mealType={meal.recipe.mealType}
+              link={meal.recipe.url}
               />
           </div>
         })} 

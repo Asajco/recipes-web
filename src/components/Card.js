@@ -8,8 +8,9 @@ function Card(props) {
     <h2 className={styles["card-title"]}>{props.title}</h2>
     <img src={props.image} alt="" className={styles["card-image"]}/>
     <div className={styles["recipe-info"]}>
-        <p><b>Coisine:</b> {props.cousine}</p>
-        <p>Meal type: {props.mealType}</p>
+        <p><b className={styles["recipe-specific-info"]}>Coisine</b><br/> {props.cousine}</p>
+        <p><b className={styles["recipe-specific-info"]}>Meal Type</b> <br/>{props.mealType}</p>
+        <a className={styles["recipe-link"]}href={props.link}>Link</a>
     </div>
     </div>
   )

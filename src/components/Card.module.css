@@ -1,26 +1,48 @@
-
+ 
 .card-container{
-    border: solid 1px rgb(185, 74, 74);
+    height: 30rem;
     margin: 1rem;
     display: flex;
     flex-direction: column;
+    border: solid 1px black;
+    border-radius: 0.5rem;
+    justify-content: space-evenly;
+    
     
 }
 .card-title{
+    height: 2rem;
     align-self: center;
-    height: 70px;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    max-height: fit-content;
     text-align: center;
+    margin: 10px;
 }
 
 .card-image{
-    max-width: fit-content;
     max-height: 17.5rem;
+    margin: 10px;
+    border-radius: 0.5rem;
 }
 
 .recipe-info{
     display: flex;
     margin: 10px;
-    justify-content: center;
+    margin-top: 20px;
+    justify-content: space-evenly;
     align-items: center;
+}
+.recipe-specific-info{
+    letter-spacing: 0.1rem;
+    
+}
+
+.recipe-link{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 3px;
 }

@@ -1,17 +1,28 @@
+@import url('https://fonts.google.com/specimen/Work+Sans');
+
+.body{
+    font-family: "Work Sans", light;
+}
+
 .form-wrapper{
+    background-image: url("../assets/food-wallpaper.jpg");
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: contain;
+    height: 85vh;
     margin: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .form-input{
     width: 20rem;
     height: 3rem;
     border-radius: 0.5rem;
-    
+    opacity: 0.8;
 }
 .form-button{
 
@@ -26,6 +37,13 @@
     margin: 3rem;
     border-style: dotted;
     line-height: 2px; 
+}
+.input-of-ingredience{
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
 }
 
 .display-none{
