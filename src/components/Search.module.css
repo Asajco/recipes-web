@@ -1,15 +1,32 @@
 @import url('https://fonts.google.com/specimen/Work+Sans');
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .body{
     font-family: "Work Sans", light;
+    margin: 0px;
+    padding: 0px;
+    
+}
+.ingr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .form-wrapper{
     background-image: url("../assets/food-wallpaper.jpg");
-    background-position: bottom;
-    background-attachment: fixed;
-    background-size: contain;
-    height: 85vh;
+    background-position: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+    background-size: 100%;
+    height: 88vh;
     margin: 3rem;
     display: flex;
     flex-direction: row;
@@ -35,15 +52,31 @@
     display: flex;
     flex-direction: column;
     margin: 3rem;
-    border-style: dotted;
     line-height: 2px; 
 }
+.remove-ingredience-button{
+    height: 5vh;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fedf51;
+    background-color: #9acbef;
+    margin-top: 0.5rem;
+    
+}
+
+
 .input-of-ingredience{
     display: inline-flex;
     justify-content: space-between;
-    margin: 0.5rem;
+    margin-bottom: 0.5rem;
     padding: 0.5rem;
-    border-bottom: 1px solid black;
+    border-radius: 0.5rem;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    background-image: linear-gradient(to top, rgba(254,236,81,1) 0%, rgba(254,210,58,1) 30%, rgba(254,194,47,1) 87%);
 }
 
 .display-none{

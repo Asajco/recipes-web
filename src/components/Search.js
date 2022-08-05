@@ -10,14 +10,19 @@ function Search() {
   const APP_ID = '242ba107'
   const APP_KEY = 'f1235af9ebb7ade8278a6b1cb0454c61'
     
-    
-  const getRecipeByIngredience = async () => {
-    const api = await fetch (
+  
+
+  useEffect(()=>{
+    async function getRecipeByIngredience(){
+      const api = await fetch (
         `https://api.edamam.com/search?q=${ingrediences}&app_id=${APP_ID}&app_key=${APP_KEY}`)
     const data = await api.json();
     setRecipe(data.hits)
-
-  }
+    }
+  
+    getRecipeByIngredience();
+  },[ingrediences])
+  
   
  function insertCurrentIngrediece(event){
   event.preventDefault()
@@ -32,44 +37,41 @@ function Search() {
       return [...prevState, currentIngredience.slice(-1)]})
       // console.log(ingrediences)
   }
-  
+  function removeCurrentIngrediece(event){
+    event.preventDefault()
+    setIngrediences(prevState => {
+      return prevState.slice(0, -1)
+    }
+    )
+  }
 
   
   function displayIngrediences(){
     console.log(ingrediences)
     console.log(recipe)
     return ingrediences.map(ingredience => {
-      return <div className={styles["input-of-ingredience"]}>
-        <p>{ingredience}</p>
-        <button onClick={removeIngredience}>click me</button>
-        
+      return <div className={styles["input-of-ingredience"]} id="ingrediences">
+        <p key={ingredience}>{ingredience}</p>
       </div>
-    }
+      }
+    
     )
   }
   
-    function removeIngredience(){
-      setIngrediences(prevState => {
-        return prevState.filter(ingredience => {
-          return ingredience !== currentIngredience})
-      })
-    } 
-  
-  useEffect(()=>{
-    getRecipeByIngredience();
-  },[ingrediences])
-  
+
   return (
     <div className={styles["body"]}>
       <form onSubmit={insertCurrentIngrediece} className={styles["form-wrapper"]}>
         <input onChange={insertCurrentIngrediece} type="text" placeholder="Type your ingrediece one by one..." name="yourIngredience" className={styles["form-input"]}></input>
         <button onClick={insertIngrediece} className={styles["form-button"]}>Add ingredience</button>
+        <a href='#ingrediences'>click</a>
       </form>
       <section>
         {ingrediences.length===0 ? <div className={styles["display-none"]}></div> : 
         
         <div className={styles["ingrediences-wrapper"]}>
         {displayIngrediences()} 
+        <button onClick={removeCurrentIngrediece} className={styles["remove-ingredience-button"]}>Remove ingredience</button>
         </div>}
         {recipe.length===0 ? <div className={styles["display-none"]}></div> :
         <div className={styles["recipes-container"]}>
@@ -82,6 +84,9 @@ function Search() {
               cousine={meal.recipe.cuisineType}
               mealType={meal.recipe.mealType}
               link={meal.recipe.url}
+              listOfIngrediences={meal.recipe.ingredientLines.length > 8 ? "Here is gonna be modal" : <p className={styles["ingr"]}>{meal.recipe.ingredientLines.map(ingr => {
+                return <p>{ingr}</p>
+              })}</p>}
               />
           </div>
         })} 
