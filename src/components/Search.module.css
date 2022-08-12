@@ -83,11 +83,13 @@
     display: none;
 }
 .recipes-container{
+    position: relative;
     margin: 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
     justify-content: center;
-    border-style: dotted;
+    border: solid 1px black;
+    border-radius: 0.5rem;
 }
 .recipe-wrapper{
     display: flex;
