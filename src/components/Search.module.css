@@ -1,97 +1,99 @@
-@import url('https://fonts.google.com/specimen/Work+Sans');
+@import url("https://fonts.google.com/specimen/Work+Sans");
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.body{
-    font-family: "Work Sans", light;
-    margin: 0px;
-    padding: 0px;
-    
-}
-.ingr{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.ingr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.form-wrapper{
-    background-image: url("../assets/food-wallpaper.jpg");
-    background-position: cover;
-    background-repeat: no-repeat;
-    border-radius: 0.5rem;
-    background-size: 100%;
-    height: 88vh;
-    margin: 3rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Courier New', Courier, monospace;
+.form-wrapper {
+  background-image: url("../assets/food-wallpaper.jpg");
+  background-position: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  background-size: 100%;
+  height: 88vh;
+  margin: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.form-input{
-    width: 20rem;
-    height: 3rem;
-    border-radius: 0.5rem;
-    opacity: 0.8;
+.form-input {
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  opacity: 0.8;
 }
-.form-button{
-
-    margin-left: 3rem;
-    height: 3rem;
-    border-radius: 0.5rem;
+.form-button {
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-.ingrediences-wrapper{
-    display: flex;
-    flex-direction: column;
-    margin: 3rem;
-    line-height: 2px; 
+.ingrediences-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 3rem;
+  line-height: 2px;
 }
-.remove-ingredience-button{
-    height: 5vh;
-    border-radius: 0.5rem;
-    border: none;
-    font-size: large;
-    font-weight: bold;
-    cursor: pointer;
-    color: #fedf51;
-    background-color: #9acbef;
-    margin-top: 0.5rem;
-    
-}
-
-
-.input-of-ingredience{
-    display: inline-flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    animation-name: fadeIn;
-    animation-duration: 2s;
-    background-image: linear-gradient(to top, rgba(254,236,81,1) 0%, rgba(254,210,58,1) 30%, rgba(254,194,47,1) 87%);
+.remove-ingredience-button {
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  border: none;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fedf51;
+  background-color: #9acbef;
 }
 
-.display-none{
-    display: none;
+.input-of-ingredience {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  background-image: linear-gradient(
+    to top,
+    rgba(254, 236, 81, 1) 0%,
+    rgba(254, 210, 58, 1) 30%,
+    rgba(254, 194, 47, 1) 87%
+  );
 }
-.recipes-container{
-    position: relative;
-    margin: 3rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
-    justify-content: center;
-    border: solid 1px black;
-    border-radius: 0.5rem;
+
+.input-of-ingredience > p {
+  margin: 0;
 }
-.recipe-wrapper{
-    display: flex;
-    
+
+.display-none {
+  display: none;
+}
+.recipes-container {
+  position: relative;
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+  border: solid 1px black;
+  border-radius: 0.5rem;
+}
+.recipe-wrapper {
+  display: flex;
+}
+
+.self-center {
+  align-self: center;
 }
