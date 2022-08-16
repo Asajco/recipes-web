@@ -1,0 +1,15 @@
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-wrapper{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+}
