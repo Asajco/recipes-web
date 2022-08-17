@@ -8,21 +8,6 @@
     }
 }
 
-@keyframes mymove{
-    0% {
-        background-color: #56535a;
-      }
-      50% {
-        background-color: #fedf51;
-      }
-      
-
-      100% {
-        background-color: #56535a;
-      }
-}
-
-
 .body{
     font-family: "Work Sans", light;
     margin: 0px;
@@ -82,6 +67,7 @@
 }
 
 .form-input:focus{
+    font-family: "Work Sans", light;
     background-color: white;
     padding: 10px;
     opacity: .99;
@@ -89,52 +75,46 @@
     outline: none;
 }
 .form-button{
-    width: 160px;
-	height: 60px;
-	cursor: pointer;
-	border: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 0.5rem;
-	background-color: #7f5a83;
-	background-image: linear-gradient(315deg, #a369aa 0%, #b0b1b2 50%);
-	background-size: 200% 100%;
-	background-position: left;
-	background-repeat: no-repeat;
-	transition: 500ms;
+    box-sizing: border-box;
+    width: 20rem;
+    height: 4rem;
+    padding: 5px;
+    padding-left: .5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+    background-color: white;
+    font-size: larger;
+    font-family: "Work Sans", light;
+    opacity: 0.7;
+    border: none;
+    cursor: pointer;
+    transition: 500ms;
 }
-.form-button::before{
-    content: 'Add ingrediences';
-	color: rgba(255,255,255,0.5);
-	font-size: 16px;
-	position: absolute;
-	display: flex;
-	border-radius: 0.5rem;
-	align-items: center;
-	justify-content: center;
-	width: 140px;
-	height: 40px;
-	background-color: #1b2845;
-	background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
-	transition: 500ms;
-}
+
 .form-button:hover{
-    background-position: right; 
-}
-.form-button:hover:before{
+    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
     color: white;
+    opacity: 1;
 }
+
 
 .form-button:focus{
     outline: none;
 }
 
 .ingrediences-wrapper{
+    padding: 5rem;
     display: flex;
     flex-direction: column;
+    border-radius: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
     margin: 3rem;
-    margin-bottom: 0;
+    background-image: url("../assets/mcdonald-image.jpeg");
+    background-size: contain;
+    background-attachment: scroll;
+    opacity: 0.8;
     line-height: 2px; 
 
 }
@@ -146,44 +126,51 @@
     font-size: large;
     font-weight: bold;
     cursor: pointer;
-    color: #fedf51;
-    background-color: #9acbef;
+    background-color: white;
     transition: 500ms;
 }
 .remove-ingredience-button:hover{
-    background-color: #2e5774;
+    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+    color: white;
 }
 
 .remove-allingredience-button{
     width: 40%;
-    height: 3.5vh;
-    align-self: center;
+    height: 5vh;
+    align-items: center;
     border-radius: 0.5rem;
-    border: none;
+    border: solid 2px black;
+    display: flex;
+    justify-content: center;
     font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
-    color: #fedf51;
-    background-color: #9acbef;
-    margin-bottom: 2.5rem;
-    transition: 200ms;
+    background-color: white;
+    transition: 400ms;
 }
 
 .remove-allingredience-button:hover{
-    background-color: #1b2845;
-    scale: 1.1;
+    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+    color: white;
+    border: none;
+    scale: 1.05;
 }
 
 
 .input-of-ingredience{
     display: inline-flex;
     justify-content: space-between;
+    width: 40%;
+    box-sizing: border-box;
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    border: solid 2px black;
+    background-color: white;
+    font-weight: bold;
+    font-size: large;
     animation-name: fadeIn;
     animation-duration: 2s;
-    background-image: linear-gradient(to top, rgba(254,236,81,1) 0%, rgba(254,210,58,1) 30%, rgba(254,194,47,1) 87%);
 }
 
 .ingrediences-for-search{
@@ -195,39 +182,43 @@
     
 }
 .search-ingrediences-button-wrapper{
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    justify-content: space-between;
+    box-sizing: border-box;
     align-items: center;
-    margin-top: 1rem
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 40%;
 }
 .ingrediences-for-search-button{
-    width: 30%;
-    height: 3.5vh;
-    display: flex;
-    justify-self: center;
-    align-self: center;
+    width: 50%;
+    height: 5vh;
     border-radius: 0.5rem;
-    border: none;
-    font-size: 0.9rem;
+    border: solid 2px black;
+    display: flex;
+    font-size: 1.2rem;
     font-weight: bold;
+    text-align: center;
     cursor: pointer;
-    color: #fedf51;
-    background-color: #9acbef;
-    margin-bottom: 2.5rem;
-    transition: 200ms;
+    background-color: white;
+    transition: 400ms;
 }
 
 .ingrediences-for-search-button:hover{
-    background-color: #1b2845;
+    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+    color: white;
+    border: none;
     scale: 1.1;
 }
 
 .display-none{
     display: none;
 }
+
 .recipes-container{
     position: relative;
     margin: 3rem;
+    margin-bottom: 2rem;
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
@@ -245,17 +236,21 @@
     
     background-repeat: no-repeat;
     background-size: 100px 100px;
+    background-color: #505050;
     animation-name: fadeIn;
+    z-index: 1;
 }
-.recipes-container::after{
+/* .recipes-container::after{
+    z-index: 0;
     content: '';
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.2);
-}
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 0.5rem;
+} */
 .recipe-wrapper{
     display: flex;
    
@@ -265,31 +260,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fedf51;
-    width: 100%;
+    background-image: url("../assets/fruit.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    width: 100vw;
     height: 100vh;
  
 }
-.toggle-ingrediences-button{
-    width: 60%;
-    height: 3rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 0.8rem;
-    background-color: #9acbef;
-}
-.ingr{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 
 .ingr-smaller{
-    
+    padding-left: 20px;
+    padding-right: 10px;
     font-size: 12px;
     font-weight: normal;
     flex-direction: column;
     justify-content: space-around;
+    text-align: justify;
     max-height: fit-content;
 }
 

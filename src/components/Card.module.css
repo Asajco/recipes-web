@@ -1,10 +1,13 @@
  .card{
+    font-family: "Work Sans", light;
     display: flex;
     flex-direction: column;
     margin: 1rem;
     height: 30rem;
     justify-content: space-evenly;
     perspective: 1000px;
+    color: white;
+    
  }
  
 .card-container{
@@ -52,7 +55,7 @@
 
 .card-back{
   transform: rotateY(180deg);
-  background-color: bisque;
+  background-color: transparent;
 }
 
 .card-title{
@@ -95,7 +98,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 0.6rem;
+    margin: 0.9rem;
     position: absolute;
     align-self: center;
     text-decoration: none;
@@ -103,6 +106,14 @@
     font-size: medium;
     font-weight: bold;
     border: 1px solid black;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     padding: 3px;
+    transition: 500ms;
+}
+
+.recipe-link:hover{
+    background-color: #1b2845;
+    border: none;
+    color: white;
+    scale: 1.05;
 }

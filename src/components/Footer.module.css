@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #636363;
+    
     height: 4rem;
     
 }
@@ -19,16 +19,24 @@
     width: 10rem;
 }
 
-.footer-icon{ 
-    
+.footer-icon{   
     width: 40px;
     height: 40px;
+    transition: 300ms;
 }
 .footer-icon:hover{
-    opacity: 80%;
+    scale: 1.1;
 }
 
 .footer-text{
+    padding: 10px;
     font-size: small;
-    justify-content: center;   
+    cursor: default;
+    justify-content: center;
+    transition: 500ms;
+}
+.footer-text:hover{
+    color: white ;
+    scale: 1.1;
+    cursor: default;
 }

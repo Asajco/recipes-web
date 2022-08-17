@@ -18,7 +18,7 @@ function Footer() {
           </a>
          </div>
           <p>|</p>
-          <p className={styles["footer-text"]}>© All rights reserved by <label className={styles["footer-text-name"]}>Jakub Petergáč</label></p>
+          <p className={styles["footer-text"]}>© All rights reserved by Jakub Petergáč</p>
           <p>|</p>
           <p className={styles["footer-text"]}>petergacj@gmail.com</p>
         </div>
