@@ -132,7 +132,7 @@ function Search() {
                  className={styles["remove-allingredience-button"]}>
                  Remove all ingrediences
               </button>
-           <button className={styles["ingrediences-for-search-button"]} onClick={()=> setFindRecipe(prevState=>!prevState)}>Search recipes</button>
+              <button className={styles["ingrediences-for-search-button"]} onClick={()=> setFindRecipe(prevState=>!prevState)}>Search recipes</button>
            </div>
            </div>
          )}

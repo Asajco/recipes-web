@@ -17,10 +17,10 @@ function Footer() {
             <img src={require("../assets/instagram.png")} alt="ig" className={styles["footer-icon"]}/>
           </a>
          </div>
-          <p>|</p>
+        <div className={styles["footer-text-wrapper"]}>
           <p className={styles["footer-text"]}>© All rights reserved by Jakub Petergáč</p>
-          <p>|</p>
           <p className={styles["footer-text"]}>petergacj@gmail.com</p>
+        </div>
         </div>
     </Router>
   )

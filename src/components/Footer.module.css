@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
     height: 4rem;
     
 }
@@ -13,16 +12,18 @@
     font-weight: bold;
 }
 .footer-socials{
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
     width: 10rem;
+    width: 45%;
 }
 
 .footer-icon{   
     width: 40px;
     height: 40px;
     transition: 300ms;
+    margin-left: 30px;
 }
 .footer-icon:hover{
     scale: 1.1;
@@ -39,4 +40,29 @@
     color: white ;
     scale: 1.1;
     cursor: default;
+}
+
+.footer-text-wrapper{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 768px){
+    .footer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 10.9rem;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+
+    .footer-text-wrapper{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        width: 100%;
+    }
 }

@@ -33,10 +33,7 @@
 }
     
 .form-wrapper{
-    background-image: url("../assets/food-wallpaper.jpg");
-    background-attachment: fixed;
-    background-position: cover;
-    background-repeat: no-repeat;
+    background: url("../assets/food-wallpaper.jpg") fixed no-repeat ;
     background-size: 100%;
     box-sizing: border-box;
     height: 100vh;
@@ -134,28 +131,6 @@
     color: white;
 }
 
-.remove-allingredience-button{
-    width: 40%;
-    height: 5vh;
-    align-items: center;
-    border-radius: 0.5rem;
-    border: solid 2px black;
-    display: flex;
-    justify-content: center;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: white;
-    transition: 400ms;
-}
-
-.remove-allingredience-button:hover{
-    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
-    color: white;
-    border: none;
-    scale: 1.05;
-}
-
 
 .input-of-ingredience{
     display: inline-flex;
@@ -184,21 +159,71 @@
 .search-ingrediences-button-wrapper{
     display: inline-flex;
     justify-content: space-between;
-    box-sizing: border-box;
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 40%;
 }
-.ingrediences-for-search-button{
-    width: 50%;
+
+.remove-allingredience-button{
+    width: 40%;
     height: 5vh;
+    align-items: center;
     border-radius: 0.5rem;
     border: solid 2px black;
     display: flex;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: bold;
-    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    transition: 400ms;
+}
+
+.remove-allingredience-button:hover{
+    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+    color: white;
+    border: none;
+    scale: 1.05;
+}
+
+@media only screen and (max-width: 768px){
+    .form-wrapper{
+        background-size: cover;
+    }
+    .ingrediences-wrapper{
+      margin: 10px;  
+    }
+    
+    .input-of-ingredience{
+        width: 100%;
+    }
+
+    .search-ingrediences-button-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .remove-allingredience-button{
+        width: 100%;
+        height: 3rem;
+    }
+    .ingrediences-for-search-button{
+        width: 100%;
+        height: 3rem;
+    }
+}
+
+
+.ingrediences-for-search-button{
+    width: 40%;
+    height: 5vh;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: solid 2px black;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: bold;
     cursor: pointer;
     background-color: white;
     transition: 400ms;
@@ -240,17 +265,7 @@
     animation-name: fadeIn;
     z-index: 1;
 }
-/* .recipes-container::after{
-    z-index: 0;
-    content: '';
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
-    border-radius: 0.5rem;
-} */
+
 .recipe-wrapper{
     display: flex;
    
@@ -263,7 +278,6 @@
     background-image: url("../assets/fruit.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    
     width: 100vw;
     height: 100vh;
  
@@ -283,4 +297,34 @@
 
 .kokot{
     position: absolute;
+}
+
+@media only screen and (max-width: 768px){
+    .recipes-container{
+        padding: 10px;
+        grid-template-columns: repeat(auto-fit, 250px);
+    }
+    
+    .ingrediences-wrapper{
+      margin: 10px;  
+    }
+    
+    .input-of-ingredience{
+        width: 100%;
+    }
+
+    .search-ingrediences-button-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .remove-allingredience-button{
+        width: 100%;
+        height: 3rem;
+    }
+    .ingrediences-for-search-button{
+        width: 100%;
+        height: 3rem;
+    }
 }
