@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/recipes-web/static/css/main.b158b3a6.css",
-    "main.js": "/recipes-web/static/js/main.77733a80.js",
+    "main.js": "/recipes-web/static/js/main.31bb6398.js",
     "static/media/food-wallpaper.jpg": "/recipes-web/static/media/food-wallpaper.794ae651293883325436.jpg",
     "static/media/fruit.jpeg": "/recipes-web/static/media/fruit.e46094cd4d80f901cffd.jpeg",
     "static/media/mcdonald-image.jpeg": "/recipes-web/static/media/mcdonald-image.66f9922dc584cc589c5b.jpeg",
@@ -9,10 +9,10 @@
     "static/media/instagram.png": "/recipes-web/static/media/instagram.776d16d0e9daa177afd5.png",
     "index.html": "/recipes-web/index.html",
     "main.b158b3a6.css.map": "/recipes-web/static/css/main.b158b3a6.css.map",
-    "main.77733a80.js.map": "/recipes-web/static/js/main.77733a80.js.map"
+    "main.31bb6398.js.map": "/recipes-web/static/js/main.31bb6398.js.map"
   },
   "entrypoints": [
     "static/css/main.b158b3a6.css",
-    "static/js/main.77733a80.js"
+    "static/js/main.31bb6398.js"
   ]
 }
