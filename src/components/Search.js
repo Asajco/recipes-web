@@ -63,6 +63,20 @@ function Search() {
     }
   }
   
+  function areIngredientsSame(){
+    const item=ingrediences.map((ingredience) => ingredience.name)
+    const item2=recipe.map((recipes)=> recipes.recipe.ingredients.map((ingredience)=>ingredience.food))
+    
+    
+    console.log(item)
+    console.log(item2.toString())
+    console.log(item2.toString().includes(item))
+ 
+  }
+  
+  
+  
+  
   //Functioin for rendering spinner title
   function titleOfSpinner(){
     if(recipe.length===0){
@@ -82,7 +96,7 @@ function Search() {
    {isLoading ? 
    <div className={styles["spinner"]}>
       {titleOfSpinner()}
-    <ClockLoader loading={isLoading} size={"90"}/>
+    <ClockLoader loading={isLoading} size={"90px"}/>
     
    </div> 
    : 
@@ -103,6 +117,7 @@ function Search() {
        </form>
       
       <section>
+      
       {ingrediences.length !== 0 && (
            <div className={styles["ingrediences-wrapper"]}>
              {ingrediences.map((ingredience) => (
@@ -139,6 +154,7 @@ function Search() {
          {findRecipe && ingrediences.length !== 0 &&(
            <div className={styles["recipes-container"]}>
              {recipe.map((meal) => {
+              
                return (
                  <div>
                    <Card
@@ -166,7 +182,7 @@ function Search() {
                  </div>
                );
              })}
-              
+            
           </div>
           
         )}
